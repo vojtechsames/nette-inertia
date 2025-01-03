@@ -75,7 +75,8 @@ abstract class InertiaPresenter extends Presenter
 
     protected function getInertiaComponentName(): string
     {
-        return $this->getName();
+        // Public:Homepage -> Public/Homepage
+        return str_replace(':', '/', $this->getName());
     }
 
     private function addInertiaHeaders(): void
