@@ -34,7 +34,7 @@ abstract class InertiaPresenter extends Presenter
         }
     }
 
-    protected function afterRender()
+    protected function afterRender(): void
     {
         parent::afterRender();
         $this->template->inertiaPageObject = Json::encode($this->pageObject->getData());
